@@ -5,6 +5,46 @@
     <title>Rainbow Grid Layout Challenge</title>
     <link rel="stylesheet" href="styles.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(6 , 1fr);
+        grid-template-rows: repeat(5, 1fr);
+      }
+      .red {
+        grid-column-start: 2;
+        grid-column-end:6;
+      }
+      .orange {
+        grid-column-start: 1;
+        grid-row-start: 2;
+        grid-row-end: 6;
+      }
+      /* More concise codes fro grid display properties */
+      .yellow {
+        grid-column: 2 / 4;
+        grid-row: 2 / 5;
+      }
+      /* A new way to write 4/6=4/span2 */
+      .green {
+        grid-column: 4 / span 2;
+      }
+      .blue {
+        grid-column: 2 / span 4;
+      }
+      .purple {
+        grid-column-start: 6;
+        grid-row: 1 / 6;
+      }
+      /* Another new way to target a grid area */
+      .gray {
+        grid-area: 3 / 4 / 5 / 6;
+      }
+      .white {
+        grid-column-start: 1;
+        grid-row-start: 1;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
